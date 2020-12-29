@@ -13,8 +13,9 @@ namespace snakeControl
     public partial class SnakeControl: UserControl
     {
         private Snake snake;
-        private int square = 25;
-        
+        private int square =25;
+        public int borderX,borderY;
+        private bool wall=false;
         public SnakeControl()
         {
            
@@ -30,9 +31,10 @@ namespace snakeControl
            Board board = new Board(panel1.Width, panel1.Height, Brushes.Green);
             board.Draw(e);
             SnakeDraw snakeDraw = new SnakeDraw();
-            
+      
             for (int i = 0; i < snake.size.Count; i++)
             {
+                //label1.Text = Convert.ToString(panel1.Height / square);
                snakeDraw.Draw(e,square*snake.size[i].X,square*snake.size[i].Y,square-1,square-1, Brushes.Black);
                 
                 
@@ -42,14 +44,35 @@ namespace snakeControl
         }
         private void snakeIsMoving(Snake snake)
         {
-            
-                
-                for (int i = snake.size.Count - 1; i > 0; i--)
+            borderX = panel1.Width / square;
+            borderY = panel1.Height / square;
+            if (!wall)
+            {
+                if ((snake.size[0].X > borderX))
+                {
+                    snake.size[0].X = 0;
+                }
+                if ((snake.size[0].Y > borderY))
+                {
+                    snake.size[0].Y = 0;
+                }
+                if ((snake.size[0].X < 0 ))
+                {
+                    snake.size[0].X = borderX;
+                }
+                if ((snake.size[0].Y < 0))
+                {
+                    snake.size[0].Y = borderY;
+                }
+
+            }
+          for (int i = snake.size.Count - 1; i > 0; i--)
             {
                 snake.size[i].X = (snake.size[i-1].X);
                 snake.size[i].Y = (snake.size[i - 1].Y);
 
             }
+
             switch (snake.direction)
             {
                 case "left":
@@ -83,7 +106,7 @@ namespace snakeControl
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
-            if (keyData == Keys.Up&&snake.direction!="down")
+            if (keyData == Keys.Up && snake.direction!="down")
             {
                 snake.direction = "up";
                 return true;
