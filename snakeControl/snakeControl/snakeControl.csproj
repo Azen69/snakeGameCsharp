@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="board.cs" />
+    <Compile Include="Positions.cs" />
     <Compile Include="Snake.cs" />
     <Compile Include="SnakeControl.cs">
       <SubType>UserControl</SubType>
@@ -51,6 +52,7 @@
       <DependentUpon>SnakeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnakeDraw.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>

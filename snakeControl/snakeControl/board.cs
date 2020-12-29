@@ -15,15 +15,16 @@ namespace snakeControl
 
         private int width { get; set; }
         private int height { get; set; }
-        public Board(int x,int y,Brush color)
+        public Board(int x,int y,Brush Color)
         {
             this.width = x;
             this.height = y;
-            Color = color;
+            this.Color = Color;
         }
         public void Draw(PaintEventArgs g)
         {
             g.Graphics.FillRectangle(Color, new Rectangle(0,0,width,height));
+           
         }
     }
 }
