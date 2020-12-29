@@ -14,12 +14,12 @@ namespace snakeControl
     {
         private Snake snake;
         private int square = 25;
-        private int sum = 0;
+        
         public SnakeControl()
         {
            
             InitializeComponent();
-            snake = new Snake(1, 1);
+            snake = new Snake(10, 10);
 
 
         }
@@ -53,16 +53,16 @@ namespace snakeControl
             switch (snake.direction)
             {
                 case "left":
-                   snake.size[0].X -=snake.xPosition;
+                   snake.size[0].X -=1;
                     break;
                 case "right":
-                    snake.size[0].X += snake.xPosition;
+                    snake.size[0].X += 1;
                     break;
                 case "up":
-                    snake.size[0].Y -= snake.yPosition;
+                    snake.size[0].Y -=1;
                     break;
                 case "down":
-                    snake.size[0].Y += snake.yPosition;
+                    snake.size[0].Y += 1;
                     break;
             }
 
@@ -82,35 +82,23 @@ namespace snakeControl
             this.timer1.Start();
         }
 
-        private void SnakeControl_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Up)
-                snake.direction = "up";
-            else if (e.KeyCode == Keys.Down)
-                snake.direction = "down";
-            else if (e.KeyCode == Keys.Right)
-                snake.direction = "right";
-            else if (e.KeyCode == Keys.Left)
-                snake.direction = "left";
-  
-            
-        }    protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
-            if (keyData == Keys.Up)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
+            if (keyData == Keys.Up&&snake.direction!="down")
             {
                 snake.direction = "up";
                 return true;
             }
-            else if (keyData == Keys.Down)
+            else if (keyData == Keys.Down && snake.direction != "up")
             {
                 snake.direction = "down";
                 return true;
             }
-            else if (keyData == Keys.Right)
+            else if (keyData == Keys.Right && snake.direction != "left")
             {
                 snake.direction = "right";
                 return true;
             }
-            else if (keyData == Keys.Left)
+            else if (keyData == Keys.Left && snake.direction != "right")
             {
                 snake.direction = "left";
                 return true;

@@ -56,7 +56,7 @@
             this.Name = "SnakeControl";
             this.Size = new System.Drawing.Size(400, 400);
             this.Load += new System.EventHandler(this.SnakeControl_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SnakeControl_KeyDown);
+            
             this.ResumeLayout(false);
 
         }
