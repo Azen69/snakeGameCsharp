@@ -1,0 +1,13 @@
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.exe.config
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.exe
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.pdb
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.dll
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.pdb
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csprojAssemblyReference.cache
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.Form1.resources
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.Properties.Resources.resources
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.GenerateResource.cache
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.CoreCompileInputs.cache
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.CopyComplete
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.exe
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.pdb

@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace snakeControl
+namespace snakeGameMainWindow
 {
-    public partial class SnakeControl: UserControl
+    public partial class Form1 : Form
     {
-        public SnakeControl()
+        public Form1()
         {
             InitializeComponent();
-          
         }
-
-   
     }
-
-
 }
