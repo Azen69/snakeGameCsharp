@@ -16,6 +16,7 @@ namespace snakeControl
         private int square =25;
         public int borderX,borderY;
         private bool wall=false;
+        
         public SnakeControl()
         {
            
@@ -28,7 +29,8 @@ namespace snakeControl
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-           Board board = new Board(panel1.Width, panel1.Height, Brushes.Green);
+
+            Board board = new Board(panel1.Width, panel1.Height, Brushes.Green,square);
             board.Draw(e);
             SnakeDraw snakeDraw = new SnakeDraw();
       
@@ -90,13 +92,23 @@ namespace snakeControl
             }
 
         }
+        protected override CreateParams CreateParams //problem with flicking solve by this
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
 
             snakeIsMoving(snake);
-            panel1.Invalidate();
-           
+
+            panel1.Refresh();
+            
         }
 
         private void SnakeControl_Load(object sender, EventArgs e)

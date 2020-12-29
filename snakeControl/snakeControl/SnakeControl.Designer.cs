@@ -65,6 +65,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "SnakeControl";
             this.Size = new System.Drawing.Size(400, 400);
             this.Load += new System.EventHandler(this.SnakeControl_Load);

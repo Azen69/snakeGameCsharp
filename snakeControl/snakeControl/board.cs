@@ -12,19 +12,46 @@ namespace snakeControl
     {
         
         private Brush Color;
-
-        private int width { get; set; }
-        private int height { get; set; }
-        public Board(int x,int y,Brush Color)
+        private int width,height,square;
+        private int x1, y1, x2, y2;
+        public Board(int x,int y,Brush Color,int square)
         {
             this.width = x;
             this.height = y;
             this.Color = Color;
+            this.square = square;
         }
         public void Draw(PaintEventArgs g)
         {
-            g.Graphics.FillRectangle(Color, new Rectangle(0,0,width,height));
-           
+           g.Graphics.FillRectangle(Color, new Rectangle(0,0,width,height));
+            Pen pen = new Pen(Brushes.DarkGray);
+            pen.Width = 2.0F;
+            x1 = 0;
+            y1 = 0;
+            x2 = 0;
+            y2 = height;
+            g.Graphics.DrawLine(pen, x1, y1, x2, y2);
+            while (x1<width)
+            {
+                x1 += square;
+                x2 += square;
+                
+                g.Graphics.DrawLine(pen, x1, y1, x2, y2);
+            }
+            x1 = 0;
+            y1 = 0;
+            x2 = width;
+            y2 = 0;
+            while (y1 < height)
+            {
+                y1 += square;
+                y2 += square;
+                
+                g.Graphics.DrawLine(pen, x1, y1, x2, y2);
+            }
+
+
+
         }
     }
 }
