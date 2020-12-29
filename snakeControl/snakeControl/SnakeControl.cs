@@ -14,12 +14,18 @@ namespace snakeControl
     {
         public SnakeControl()
         {
+           
             InitializeComponent();
-          
+           
+            
         }
+  
 
-   
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Board board = new Board(panel1.Width, panel1.Height, Brushes.Violet);
+            board.Draw(e);
+        }
     }
-
 
 }

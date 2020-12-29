@@ -1,6 +1,6 @@
 ﻿namespace snakeGameMainWindow
 {
-    partial class Form1
+    partial class SnakeGame
     {
         /// <summary>
         /// Required designer variable.
@@ -38,13 +38,14 @@
             this.snakeControl1.Size = new System.Drawing.Size(400, 400);
             this.snakeControl1.TabIndex = 0;
             // 
-            // Form1
+            // SnakeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.snakeControl1);
-            this.Name = "Form1";
+            this.Name = "SnakeGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 
