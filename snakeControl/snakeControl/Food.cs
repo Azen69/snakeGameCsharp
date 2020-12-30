@@ -20,7 +20,7 @@ namespace snakeControl
         }
         public void Draw(PaintEventArgs g, SolidBrush Color)
         {
-            g.Graphics.FillRectangle(Color, new Rectangle(this.size[0].X* sizeOfSquare, this.size[0].Y* sizeOfSquare, this.sizeOfSquare, this.sizeOfSquare-1 ));
+            g.Graphics.FillRectangle(Color, new Rectangle(this.size[0].X* sizeOfSquare, this.size[0].Y* sizeOfSquare, this.sizeOfSquare-1, this.sizeOfSquare-1 ));
         }
     }
 }

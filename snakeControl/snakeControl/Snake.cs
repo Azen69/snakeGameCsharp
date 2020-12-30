@@ -21,11 +21,26 @@ namespace snakeControl
             this.square = square;
             size = new List<Positions>();
             size.Add(new Positions(this.xPosition, this.yPosition));
+
             direction = "right";
         }
         public void Draw(PaintEventArgs g, int x, int y, int width, int height, Brush Color)
         {
             g.Graphics.FillRectangle(Color, new Rectangle(x, y, width, height));
+        }
+        public bool bodyColision()
+        {
+            for (int i = 1; i < size.Count; i++)
+            {
+                if (size[i].X == size[0].X && size[i].Y == size[0].Y)
+                {
+                    return true;
+
+                }
+                
+
+            }
+            return false;
         }
         public void snakeIsMoving(bool wall, int width,int height)
         {
