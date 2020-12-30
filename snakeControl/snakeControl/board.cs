@@ -14,17 +14,17 @@ namespace snakeControl
         private Brush Color;
         private int width,height,square;
         private int x1, y1, x2, y2;
-        public Board(int x,int y,Brush Color,int square)
+        public Board(int x,int y, SolidBrush Color,int square)
         {
             this.width = x;
             this.height = y;
             this.Color = Color;
             this.square = square;
         }
-        public void Draw(PaintEventArgs g)
+        public void Draw(PaintEventArgs g, Color color)
         {
            g.Graphics.FillRectangle(Color, new Rectangle(0,0,width,height));
-            Pen pen = new Pen(Brushes.DarkGray);
+            Pen pen = new Pen(color);
             pen.Width = 2.0F;
             x1 = 0;
             y1 = 0;

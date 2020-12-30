@@ -16,10 +16,5 @@ namespace snakeGameMainWindow
         {
             InitializeComponent();
         }
-
-        private void snakeControl1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

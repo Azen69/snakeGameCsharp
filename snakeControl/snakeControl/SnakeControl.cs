@@ -10,106 +10,54 @@ using System.Windows.Forms;
 
 namespace snakeControl
 {
-    public partial class SnakeControl: UserControl
+    public partial class SnakeControl : UserControl
     {
+        private Random rnd;
         private Snake snake;
-        private int square =25;
-        public int borderX,borderY;
-        private bool wall=false;
-        
+        private Board board;
+        private Food food;
+        private List<int> randomListOfPosition;
+        private int square = 25;
+        private bool wall = false;
+        private bool foodExisted = false;
+        private Color boardColor = Color.FromArgb(255, Color.Green);
+        private Color borderColor = Color.FromArgb(255, Color.DarkGray);
+        private Color foodColor = Color.FromArgb(255, Color.Red);
+
         public SnakeControl()
         {
-           
             InitializeComponent();
-            snake = new Snake(10, 10);
-
-
+            positionGenerator();
+            snake = new Snake(randomListOfPosition[0], randomListOfPosition[1], square);
+            randomListOfPosition.Clear();
+            positionGenerator();
+            food = new Food(randomListOfPosition[0], randomListOfPosition[1],square);
+            foodExisted = true;
+            randomListOfPosition.Clear();
+            board = new Board(panel1.Width, panel1.Height, new SolidBrush(boardColor), square);
         }
-  
-
+        private void positionGenerator()
+        {
+            randomListOfPosition = new List<int>();
+            rnd = new Random();
+            randomListOfPosition.Add(rnd.Next(2,panel1.Width/square-2));
+            randomListOfPosition.Add(rnd.Next(2,panel1.Height / square-2));
+            
+        }
+ 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-            Board board = new Board(panel1.Width, panel1.Height, Brushes.Green,square);
-            board.Draw(e);
-            SnakeDraw snakeDraw = new SnakeDraw();
-      
+            
+            board.Draw(e, borderColor);
+            food.Draw(e, new SolidBrush(foodColor));
             for (int i = 0; i < snake.size.Count; i++)
             {
-                //label1.Text = Convert.ToString(panel1.Height / square);
-               snakeDraw.Draw(e,square*snake.size[i].X,square*snake.size[i].Y,square-1,square-1, Brushes.Black);
-                
-                
-            }
-            
-
-        }
-        private void snakeIsMoving(Snake snake)
-        {
-            borderX = panel1.Width / square;
-            borderY = panel1.Height / square;
-            if (!wall)
-            {
-                if ((snake.size[0].X > borderX))
-                {
-                    snake.size[0].X = 0;
-                }
-                if ((snake.size[0].Y > borderY))
-                {
-                    snake.size[0].Y = 0;
-                }
-                if ((snake.size[0].X < 0 ))
-                {
-                    snake.size[0].X = borderX;
-                }
-                if ((snake.size[0].Y < 0))
-                {
-                    snake.size[0].Y = borderY;
-                }
-
-            }
-          for (int i = snake.size.Count - 1; i > 0; i--)
-            {
-                snake.size[i].X = (snake.size[i-1].X);
-                snake.size[i].Y = (snake.size[i - 1].Y);
-
-            }
-
-            switch (snake.direction)
-            {
-                case "left":
-                   snake.size[0].X -=1;
-                    break;
-                case "right":
-                    snake.size[0].X += 1;
-                    break;
-                case "up":
-                    snake.size[0].Y -=1;
-                    break;
-                case "down":
-                    snake.size[0].Y += 1;
-                    break;
+               snake.Draw(e,square*snake.size[i].X,square*snake.size[i].Y,square,square, Brushes.Black);
             }
 
         }
-        protected override CreateParams CreateParams //problem with flicking solve by this
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle = cp.ExStyle | 0x2000000;
-                return cp;
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-            snakeIsMoving(snake);
-
-            panel1.Refresh();
-            
-        }
+    
 
         private void SnakeControl_Load(object sender, EventArgs e)
         {
@@ -117,7 +65,15 @@ namespace snakeControl
             this.timer1.Start();
         }
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            snake.snakeIsMoving(wall,panel1.Width,panel1.Height);
+            panel1.Refresh();
+            
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) //problem with priority of usercontrol solved by this
+        {
             if (keyData == Keys.Up && snake.direction!="down")
             {
                 snake.direction = "up";
@@ -143,7 +99,16 @@ namespace snakeControl
                 return base.ProcessCmdKey(ref msg, keyData);
 
             }
+        }
+        protected override CreateParams CreateParams //problem with flicking solve by this
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
             }
+        }
     }
 
 }

@@ -38,7 +38,7 @@
             this.snakeControl1.Name = "snakeControl1";
             this.snakeControl1.Size = new System.Drawing.Size(400, 400);
             this.snakeControl1.TabIndex = 0;
-            this.snakeControl1.Load += new System.EventHandler(this.snakeControl1_Load);
+            
             // 
             // SnakeGame
             // 
