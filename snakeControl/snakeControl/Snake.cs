@@ -28,7 +28,7 @@ namespace snakeControl
         {
             g.Graphics.FillRectangle(Color, new Rectangle(x, y, width, height));
         }
-        public bool bodyColision()
+        public bool bodyColision(bool wall)
         {
             for (int i = 1; i < size.Count; i++)
             {
@@ -37,8 +37,16 @@ namespace snakeControl
                     return true;
 
                 }
-                
+            }
+            if (wall)
+            {
 
+                if (size[0].X > borderX || size[0].Y> borderY || size[0].X < 0 || size[0].Y < 0)
+                {
+                    return true;
+                }
+
+               
             }
             return false;
         }

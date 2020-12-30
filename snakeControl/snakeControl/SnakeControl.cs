@@ -18,7 +18,7 @@ namespace snakeControl
         private Food food;
         private List<int> randomListOfPositionSnake, randomListOfPositionFood;
         private int square = 25;
-        private bool wall = false;
+        private bool wall = true;
         private bool foodExisted = false;
         private Color boardColor = Color.FromArgb(255, Color.Green);
         private Color borderColor = Color.FromArgb(255, Color.DarkGray);
@@ -98,7 +98,7 @@ namespace snakeControl
         {
             
             snake.snakeIsMoving(wall,panel1.Width,panel1.Height);
-            if (snake.bodyColision())
+            if (snake.bodyColision(wall))
             {
                 this.timer1.Stop();
             }
