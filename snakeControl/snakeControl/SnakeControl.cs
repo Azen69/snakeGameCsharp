@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace snakeControl
 {
     public partial class SnakeControl : UserControl
@@ -20,7 +19,7 @@ namespace snakeControl
         private int square = 25;
         private bool wall = true;
         private bool foodExisted = false;
-        private Color boardColor = Color.FromArgb(255, Color.Green);
+        private Color boardColor = Color.FromArgb(0, Color.Green);
         private Color borderColor = Color.FromArgb(255, Color.DarkGray);
         private Color foodColor = Color.FromArgb(255, Color.Red);
 
@@ -129,6 +128,7 @@ namespace snakeControl
                 snake.direction = "left";
                 return true;
             }
+         
             else
             {
                 return base.ProcessCmdKey(ref msg, keyData);
