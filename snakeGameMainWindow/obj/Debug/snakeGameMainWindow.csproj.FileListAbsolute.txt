@@ -11,3 +11,5 @@ D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\sn
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.pdb
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.CopyComplete
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.SnakeGame.resources
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\back.jpg
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\button.jpg

@@ -26,17 +26,18 @@ namespace snakeControl
 
         public SnakeControl()
         {
+            InitializeComponent();
             randomListOfPositionSnake = new List<int>();
             randomListOfPositionFood = new List<int>();
-            InitializeComponent();
+            
             positionGenerator(randomListOfPositionSnake);
             snake = new Snake(randomListOfPositionSnake[0], randomListOfPositionSnake[1], square);
             positionGenerator(randomListOfPositionFood);
             food = new Food(randomListOfPositionFood[0], randomListOfPositionFood[1],square);
             foodExisted = true;
-            board = new Board(panel1.Width, panel1.Height, new SolidBrush(boardColor), square);
+            
         }
-        private void positionGenerator(List<int> randomListOfPosition)
+        public void positionGenerator(List<int> randomListOfPosition)
         {
             randomListOfPosition.Add(rnd.Next(2,panel1.Width/square-2));
             randomListOfPosition.Add(rnd.Next(2,panel1.Height / square-2));
@@ -44,6 +45,7 @@ namespace snakeControl
  
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            board = new Board(panel1.Width, panel1.Height, new SolidBrush(boardColor), square);
             if (!foodExisted)
             {
                 foodExisted = true;

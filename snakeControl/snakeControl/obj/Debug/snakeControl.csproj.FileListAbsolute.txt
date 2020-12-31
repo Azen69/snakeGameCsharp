@@ -1,8 +1,10 @@
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.dll
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.pdb
-D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csprojAssemblyReference.cache
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.SnakeControl.resources
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.GenerateResource.cache
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.CoreCompileInputs.cache
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.dll
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.pdb
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\back.jpg
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\button.jpg
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csprojAssemblyReference.cache
