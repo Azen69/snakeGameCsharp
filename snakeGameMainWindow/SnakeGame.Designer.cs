@@ -47,6 +47,7 @@
             this.pictureBoxBlue = new System.Windows.Forms.PictureBox();
             this.pictureBoxGreen = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhite = new System.Windows.Forms.PictureBox();
+            this.newGameButton = new System.Windows.Forms.Button();
             this.snakeControl1 = new snakeControl.SnakeControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGreen)).BeginInit();
@@ -121,6 +122,7 @@
             // 
             // mainMenuButton
             // 
+            this.mainMenuButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mainMenuButton.BackColor = System.Drawing.Color.Transparent;
             this.mainMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.mainMenuButton.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,6 +226,7 @@
             // 
             // radioButtonWhite
             // 
+            this.radioButtonWhite.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonWhite.AutoSize = true;
             this.radioButtonWhite.BackColor = System.Drawing.Color.Black;
             this.radioButtonWhite.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,6 +242,7 @@
             // 
             // radioButtonGreen
             // 
+            this.radioButtonGreen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonGreen.AutoSize = true;
             this.radioButtonGreen.BackColor = System.Drawing.Color.Black;
             this.radioButtonGreen.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,6 +258,7 @@
             // 
             // radioButtonBlue
             // 
+            this.radioButtonBlue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonBlue.AutoSize = true;
             this.radioButtonBlue.BackColor = System.Drawing.Color.Black;
             this.radioButtonBlue.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,6 +288,7 @@
             // 
             // pictureBoxBlue
             // 
+            this.pictureBoxBlue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlue.Location = new System.Drawing.Point(553, 389);
             this.pictureBoxBlue.Name = "pictureBoxBlue";
             this.pictureBoxBlue.Size = new System.Drawing.Size(15, 18);
@@ -292,6 +298,7 @@
             // 
             // pictureBoxGreen
             // 
+            this.pictureBoxGreen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxGreen.Location = new System.Drawing.Point(648, 389);
             this.pictureBoxGreen.Name = "pictureBoxGreen";
             this.pictureBoxGreen.Size = new System.Drawing.Size(15, 18);
@@ -301,6 +308,7 @@
             // 
             // pictureBoxWhite
             // 
+            this.pictureBoxWhite.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhite.Location = new System.Drawing.Point(730, 389);
             this.pictureBoxWhite.Name = "pictureBoxWhite";
             this.pictureBoxWhite.Size = new System.Drawing.Size(15, 18);
@@ -308,11 +316,31 @@
             this.pictureBoxWhite.TabStop = false;
             this.pictureBoxWhite.Visible = false;
             // 
+            // newGameButton
+            // 
+            this.newGameButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.newGameButton.BackColor = System.Drawing.Color.Transparent;
+            this.newGameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.newGameButton.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newGameButton.ForeColor = System.Drawing.Color.Yellow;
+            this.newGameButton.Image = ((System.Drawing.Image)(resources.GetObject("newGameButton.Image")));
+            this.newGameButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.newGameButton.Location = new System.Drawing.Point(352, 37);
+            this.newGameButton.Name = "newGameButton";
+            this.newGameButton.Size = new System.Drawing.Size(184, 67);
+            this.newGameButton.TabIndex = 21;
+            this.newGameButton.Text = "New Game";
+            this.newGameButton.UseVisualStyleBackColor = false;
+            this.newGameButton.Visible = false;
+            this.newGameButton.Click += new System.EventHandler(this.newGameButton_Click);
+            // 
             // snakeControl1
             // 
             this.snakeControl1.AutoSize = true;
             this.snakeControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.snakeControl1.Location = new System.Drawing.Point(12, 12);
+            this.snakeControl1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.snakeControl1.Location = new System.Drawing.Point(20, 37);
+            this.snakeControl1.Margin = new System.Windows.Forms.Padding(0);
             this.snakeControl1.Name = "snakeControl1";
             this.snakeControl1.Size = new System.Drawing.Size(10, 10);
             this.snakeControl1.TabIndex = 0;
@@ -324,6 +352,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.newGameButton);
             this.Controls.Add(this.pictureBoxWhite);
             this.Controls.Add(this.pictureBoxGreen);
             this.Controls.Add(this.pictureBoxBlue);
@@ -331,7 +360,6 @@
             this.Controls.Add(this.radioButtonBlue);
             this.Controls.Add(this.radioButtonGreen);
             this.Controls.Add(this.radioButtonWhite);
-            this.Controls.Add(this.saveOptions);
             this.Controls.Add(this.wallBox);
             this.Controls.Add(this.speedLabel);
             this.Controls.Add(this.speedBox);
@@ -340,9 +368,10 @@
             this.Controls.Add(this.topResultButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.snakeControl1);
-            this.Controls.Add(this.startGameButton);
-            this.Controls.Add(this.mainMenuButton);
             this.Controls.Add(this.optionsMenuButton);
+            this.Controls.Add(this.mainMenuButton);
+            this.Controls.Add(this.saveOptions);
+            this.Controls.Add(this.startGameButton);
             this.DoubleBuffered = true;
             this.Name = "SnakeGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -378,6 +407,7 @@
         private System.Windows.Forms.PictureBox pictureBoxBlue;
         private System.Windows.Forms.PictureBox pictureBoxGreen;
         private System.Windows.Forms.PictureBox pictureBoxWhite;
+        private System.Windows.Forms.Button newGameButton;
     }
 }
 

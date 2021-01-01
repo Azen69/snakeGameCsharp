@@ -23,7 +23,7 @@ namespace snakeControl
         }
         public void Draw(PaintEventArgs g, Color color)
         {
-           g.Graphics.FillRectangle(Color, new Rectangle(0,0,width,height));
+           g.Graphics.FillRectangle(this.Color, new Rectangle(0,0,width,height));
             Pen pen = new Pen(color);
             pen.Width = 2.0F;
             x1 = 0;

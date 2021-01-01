@@ -17,15 +17,26 @@ namespace snakeControl
         private Food food;
         private List<int> randomListOfPositionSnake, randomListOfPositionFood;
         private int square = 25;
-        private bool wall = true;
+        public bool wall;
         private bool foodExisted = false;
-        private Color boardColor = Color.FromArgb(0, Color.Green);
+        public Color boardColor;
         private Color borderColor = Color.FromArgb(255, Color.DarkGray);
         private Color foodColor = Color.FromArgb(255, Color.Red);
-
+        private FileManager file;
+        private List<string> defaultSettings;
+        public int speed;
+        private double resultDivision;
+        private double resultWidth;
+        private double resultHeight;
         public SnakeControl()
         {
             InitializeComponent();
+            file = new FileManager();
+            file.readFile();
+            defaultSettings = file.list;
+            speed = Convert.ToInt32(defaultSettings[2]);
+            boardColor = Color.FromArgb(255, Color.FromName(defaultSettings[3]));
+            wall = Convert.ToBoolean(defaultSettings[4]);
             randomListOfPositionSnake = new List<int>();
             randomListOfPositionFood = new List<int>();
             
@@ -36,15 +47,38 @@ namespace snakeControl
             foodExisted = true;
             
         }
+        public void refresh(List<string>Settings)
+        {
+
+           
+            speed = Convert.ToInt32(Settings[2]);
+            boardColor = Color.FromArgb(255, Color.FromName(Settings[3]));
+            wall = Convert.ToBoolean(Settings[4]);
+            randomListOfPositionSnake = new List<int>();
+            randomListOfPositionFood = new List<int>();
+            this.timer1.Interval = 200 / speed;
+            positionGenerator(randomListOfPositionSnake);
+            snake = new Snake(randomListOfPositionSnake[0], randomListOfPositionSnake[1], square);
+            positionGenerator(randomListOfPositionFood);
+            food = new Food(randomListOfPositionFood[0], randomListOfPositionFood[1], square);
+            foodExisted = true;
+        }
+
         public void positionGenerator(List<int> randomListOfPosition)
         {
-            randomListOfPosition.Add(rnd.Next(2,panel1.Width/square-2));
-            randomListOfPosition.Add(rnd.Next(2,panel1.Height / square-2));
+            randomListOfPosition.Add(rnd.Next(2,this.Width/square-2));
+            randomListOfPosition.Add(rnd.Next(2,this.Height / square-2));
         }
  
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            board = new Board(panel1.Width, panel1.Height, new SolidBrush(boardColor), square);
+            resultDivision = this.Width / square;
+            resultWidth = Math.Floor(resultDivision);
+            resultWidth *= square;
+            resultDivision = this.Height / square;
+            resultHeight = Math.Floor(resultDivision);
+            resultHeight *= square;
+            board = new Board(Convert.ToInt32(resultWidth), Convert.ToInt32(resultHeight), new SolidBrush(boardColor), square);
             if (!foodExisted)
             {
                 foodExisted = true;
@@ -91,14 +125,15 @@ namespace snakeControl
 
         private void SnakeControl_Load(object sender, EventArgs e)
         {
-            this.timer1.Interval = 200;
+           
+            this.timer1.Interval = 200/speed;
             this.timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             
-            snake.snakeIsMoving(wall,panel1.Width,panel1.Height);
+            snake.snakeIsMoving(wall,this.Width,this.Height);
             if (snake.bodyColision(wall))
             {
                 this.timer1.Stop();
