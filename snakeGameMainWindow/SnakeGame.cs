@@ -15,6 +15,9 @@ namespace snakeGameMainWindow
     {
         private FileManager file;
         private List<string> defaultSettings;
+        private Timer t1;
+        
+        
         public SnakeGame()
         {
             InitializeComponent();     
@@ -64,7 +67,11 @@ namespace snakeGameMainWindow
             pictureBoxBlue.BackColor = Color.FromArgb(255, Color.Blue);
         pictureBoxGreen.BackColor = Color.FromArgb(255, Color.Green);
         pictureBoxWhite.BackColor = Color.FromArgb(255, Color.White);
-           
+            t1 = new Timer();
+            t1.Interval = 1;
+            t1.Tick += new EventHandler(scoreUpdate);
+            t1.Tick += new EventHandler(GameOver);
+            t1.Enabled = true;
         }
         private void saveSettings()
         {
@@ -110,11 +117,14 @@ namespace snakeGameMainWindow
             startGameButton.Hide();
             exitButton.Hide();
             snakeControl1.Show();
-            if (!(startGameButton.Text == "Resume Game"))
+            scoreLabel.Show();
+            if (!(startGameButton.Text == "Resume Game") || snakeControl1.gameOver)
             {
+                
                 snakeControl1.refresh(defaultSettings);
 
             }
+           
             newGameButton.Hide();
 
         }
@@ -130,7 +140,21 @@ namespace snakeGameMainWindow
         }
         public void mainMenuClick()
         {
-            
+            if (snakeControl1.gameOver)
+            {
+
+                PanelGameOver.Hide();
+                exitButton.Location = new Point(topResultButton.Location.X, topResultButton.Location.Y+92);
+                mainMenuButton.Location = new Point(saveOptions.Location.X, saveOptions.Location.Y - 92);
+                t1.Start();
+                snakeControl1.gameOver = false;
+                exitButton.Hide();
+                mainMenuButton.Hide();
+                playerTopButton.Hide();
+                startGameButton.Text ="START GAME";
+
+
+            }
             startGameButton.Show();
             topResultButton.Show();
             
@@ -153,10 +177,12 @@ namespace snakeGameMainWindow
             radioButtonWhite.Hide();
             pictureBoxWhite.Hide();
             BoardLabel.Hide();
+            scoreLabel.Hide();
             if (startGameButton.Text == "Resume Game")
             {
                 newGameButton.Show();
             }
+
 
             
             
@@ -184,7 +210,6 @@ namespace snakeGameMainWindow
             startGameButton.Width=this.Width/5;
             exitButton.Width = this.Width / 5;
             topResultButton.Width = this.Width / 5;
-            mainMenuButton.Width = this.Width / 5;
             optionsMenuButton.Width = this.Width / 5;
 
             mainMenuButton.Width=this.Width/5;
@@ -202,6 +227,13 @@ namespace snakeGameMainWindow
             radioButtonWhite.Left = this.Width / 2 + (Convert.ToInt32(Math.Round(0.15 * this.Width))) + 200;
             pictureBoxWhite.Left = this.Width / 2 + (Convert.ToInt32(Math.Round(0.15 * this.Width))) + 235;
             BoardLabel.Left = this.Width / 2 + (Convert.ToInt32(Math.Round(0.15 * this.Width))) + 100;
+            scoreLabel.Location = new Point(20,10);
+            
+        }
+        private void scoreUpdate(object sender, EventArgs e)
+        {
+
+            scoreLabel.Text = "Score:"+Convert.ToString(snakeControl1.score);
         }
 
         private void optionsMenuButton_Click(object sender, EventArgs e)
@@ -232,9 +264,9 @@ namespace snakeGameMainWindow
         {
             saveSettings();
             string message = "Changes have been saved and will be visible in the new game";
-            string caption = "INFO about saving";
-            DialogResult result;
-            result = MessageBox.Show(message, caption,
+            string caption = "INFO about saving settings";
+
+            DialogResult result = MessageBox.Show(message, caption,
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Exclamation);
 
@@ -256,6 +288,43 @@ namespace snakeGameMainWindow
             exitButton.Hide();
             newGameButton.Hide();
             snakeControl1.Show();
+            snakeControl1.score = 0;
+            scoreLabel.Show();
         }
+        private void GameOver(object sender, EventArgs e)
+        {
+            if (snakeControl1.gameOver)
+            {
+                PanelGameOver.Show();
+                PanelGameOver.Refresh();
+                t1.Stop();
+            }
+        }
+
+        private void PanelGameOver_Paint(object sender, PaintEventArgs e)
+        {
+            PanelGameOver.Width = this.Width;
+            PanelGameOver.Height = this.Height;
+            String StringOver = "GAME OVER";
+            
+            Font drawFont = new Font("Algerian", 40);
+            SolidBrush drawBrush = new SolidBrush(Color.Yellow);
+            StringFormat drawFormat = new StringFormat();
+            PanelGameOver.BackColor = Color.FromArgb(125,Color.Red);
+            Font ScoreFont = new Font("Algerian", 30);
+            e.Graphics.DrawString(StringOver, drawFont, drawBrush, this.Width/2, this.Height/8, drawFormat);
+            e.Graphics.DrawString(scoreLabel.Text, ScoreFont, drawBrush, this.Width / 2, this.Height / 4, drawFormat);
+            UsernameLabel.Left = this.Width/2;
+            UsernameLabel.Height = this.Height / 3;
+            UsernameText.Left = this.Width/2;
+            UsernameText.Height = this.Height / 2;
+            mainMenuButton.Location = new Point(this.Width / 2, this.Height / 2+50);
+            exitButton.Location = new Point(this.Width / 2,this.Height/2+150);
+            playerTopButton.Location = new Point(this.Width / 2+ this.Width / 4, this.Height / 2 + 50);
+            exitButton.Show();
+            mainMenuButton.Show();
+            playerTopButton.Show();
+        }
+ 
     }
 }

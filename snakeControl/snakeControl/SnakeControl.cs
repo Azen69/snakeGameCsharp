@@ -28,6 +28,8 @@ namespace snakeControl
         private double resultDivision;
         private double resultWidth;
         private double resultHeight;
+        public int score { get; set; }
+        public bool gameOver { get; set; }
         public SnakeControl()
         {
             InitializeComponent();
@@ -45,12 +47,12 @@ namespace snakeControl
             positionGenerator(randomListOfPositionFood);
             food = new Food(randomListOfPositionFood[0], randomListOfPositionFood[1],square);
             foodExisted = true;
-            
+            gameOver = false;
+
+
         }
         public void refresh(List<string>Settings)
         {
-
-           
             speed = Convert.ToInt32(Settings[2]);
             boardColor = Color.FromArgb(255, Color.FromName(Settings[3]));
             wall = Convert.ToBoolean(Settings[4]);
@@ -62,6 +64,8 @@ namespace snakeControl
             positionGenerator(randomListOfPositionFood);
             food = new Food(randomListOfPositionFood[0], randomListOfPositionFood[1], square);
             foodExisted = true;
+            gameOver = false;
+            score = 0;
         }
 
         public void positionGenerator(List<int> randomListOfPosition)
@@ -118,6 +122,15 @@ namespace snakeControl
             if (snake.size[0].X==food.size[0].X && snake.size[0].Y == food.size[0].Y)
             {
                 snake.size.Add(new Positions(food.size[0].X, food.size[0].Y));
+                
+                if (!wall)
+                {
+                    score = (score+speed);
+                }
+                else
+                {
+                    score = (score+speed)+1;
+                }
                 foodExisted = false;
                 
             }
@@ -125,7 +138,7 @@ namespace snakeControl
 
         private void SnakeControl_Load(object sender, EventArgs e)
         {
-           
+            
             this.timer1.Interval = 200/speed;
             this.timer1.Start();
         }
@@ -136,8 +149,11 @@ namespace snakeControl
             snake.snakeIsMoving(wall,this.Width,this.Height);
             if (snake.bodyColision(wall))
             {
+                gameOver = true;
                 this.timer1.Stop();
+                
             }
+
             panel1.Refresh();
            
         }
