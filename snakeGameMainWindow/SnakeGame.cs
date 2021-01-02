@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using snakeControl;
-
+using System.Data.SqlClient;
 namespace snakeGameMainWindow
 {
     public partial class SnakeGame : Form
@@ -325,6 +325,36 @@ namespace snakeGameMainWindow
             mainMenuButton.Show();
             playerTopButton.Show();
         }
- 
+
+        private void playerTopButton_Click(object sender, EventArgs e)
+        {
+            
+            SqlConnection myConn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlCommand command;
+            SqlCommand command2;
+            try
+            {
+                myConn.Open();
+               
+                command = new SqlCommand("INSERT INTO Players(username,dateCreation) VALUES (@a1,@a2)",myConn);
+                command.Parameters.Add("a1",UsernameText.Text);
+                DateTime date1 = DateTime.Now;
+                command.Parameters.Add("a2", date1);
+                command.ExecuteNonQuery();
+                MessageBox.Show("jest git", "SnakeGame", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (myConn.State == ConnectionState.Open)
+                {
+                    myConn.Close();
+                }
+            }
+        }
     }
 }

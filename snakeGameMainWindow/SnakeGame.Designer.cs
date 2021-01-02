@@ -380,9 +380,10 @@
             this.playerTopButton.Name = "playerTopButton";
             this.playerTopButton.Size = new System.Drawing.Size(184, 67);
             this.playerTopButton.TabIndex = 24;
-            this.playerTopButton.Text = "Your Best Results";
+            this.playerTopButton.Text = "Your Results";
             this.playerTopButton.UseVisualStyleBackColor = false;
             this.playerTopButton.Visible = false;
+            this.playerTopButton.Click += new System.EventHandler(this.playerTopButton_Click);
             // 
             // UsernameText
             // 

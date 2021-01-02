@@ -13,3 +13,5 @@ D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\sn
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.SnakeGame.resources
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\back.jpg
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\button.jpg
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase.mdf
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase_log.ldf
