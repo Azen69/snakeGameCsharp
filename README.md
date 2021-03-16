@@ -1,5 +1,5 @@
 # SNAKE GAME
-SNAKE GAME created in C# with database connection. The game has a Graphical interface with multople views.
+SNAKE GAME created in C# with database connection. The game has a graphical interface with multiple views.
 The player must collect as many points as possible. Difficulty level increases as points increase, because the snake gets bigger.
 ##
 ## Setup
