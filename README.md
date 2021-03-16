@@ -23,9 +23,9 @@ Top 10:
 Options:
 ![Options](./imagesFromGame/optionScreen.PNG)
 Available Resolution:
-![Resolution](./imagesFromGame/resolution.PNG)
+![Resolution](./imagesFromGame/resolution.png)
 Speed Option:
-![Speed](./imagesFromGame/speed.PNG)
+![Speed](./imagesFromGame/speed.png)
 Blue Board:
 ![Blue Board](./imagesFromGame/blueGame.PNG)
 White Board:
