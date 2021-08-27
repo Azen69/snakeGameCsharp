@@ -15,3 +15,46 @@ D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\ba
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\button.jpg
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase.mdf
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase_log.ldf
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\EntityFramework.dll
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.dll.config
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeGameMainWindow\bin\Debug\EntityFramework.xml
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\back.jpg
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\button.jpg
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase.mdf
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase_log.ldf
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.exe.config
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.exe
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.pdb
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.dll
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\EntityFramework.dll
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.pdb
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.dll.config
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\bin\Debug\EntityFramework.xml
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.AssemblyReference.cache
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.SnakeGame.resources
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.Properties.Resources.resources
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.GenerateResource.cache
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.CoreCompileInputs.cache
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.CopyComplete
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.exe
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.pdb
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\back.jpg
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\button.jpg
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase.mdf
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeDatabase_log.ldf
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.exe.config
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.exe
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeGameMainWindow.pdb
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.dll
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\EntityFramework.dll
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.pdb
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\snakeControl.dll.config
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\bin\Debug\EntityFramework.xml
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.AssemblyReference.cache
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.SnakeGame.resources
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.Properties.Resources.resources
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.GenerateResource.cache
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.CoreCompileInputs.cache
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.csproj.CopyComplete
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.exe
+E:\Desktop\Projekty\snakeGameCsharp\snakeGameMainWindow\obj\Debug\snakeGameMainWindow.pdb

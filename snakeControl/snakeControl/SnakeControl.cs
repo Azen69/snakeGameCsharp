@@ -70,8 +70,8 @@ namespace snakeControl
 
         public void positionGenerator(List<int> randomListOfPosition)
         {
-            randomListOfPosition.Add(rnd.Next(2,this.Width/square-2));
-            randomListOfPosition.Add(rnd.Next(2,this.Height / square-2));
+            randomListOfPosition.Add(rnd.Next(4,this.Width/square-2));
+            randomListOfPosition.Add(rnd.Next(4,this.Height / square-2));
         }
  
         private void panel1_Paint(object sender, PaintEventArgs e)

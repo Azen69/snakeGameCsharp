@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SnakeGame));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.startGameButton = new System.Windows.Forms.Button();
             this.optionsMenuButton = new System.Windows.Forms.Button();
             this.topResultButton = new System.Windows.Forms.Button();
@@ -54,10 +56,13 @@
             this.UsernameText = new System.Windows.Forms.TextBox();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.snakeControl1 = new snakeControl.SnakeControl();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhite)).BeginInit();
             this.PanelGameOver.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // startGameButton
@@ -108,6 +113,7 @@
             this.topResultButton.TabIndex = 3;
             this.topResultButton.Text = "Top 10";
             this.topResultButton.UseVisualStyleBackColor = false;
+            this.topResultButton.Click += new System.EventHandler(this.topResultButton_Click);
             // 
             // exitButton
             // 
@@ -360,9 +366,9 @@
             this.PanelGameOver.Controls.Add(this.playerTopButton);
             this.PanelGameOver.Controls.Add(this.UsernameText);
             this.PanelGameOver.Controls.Add(this.UsernameLabel);
-            this.PanelGameOver.Location = new System.Drawing.Point(-3, -1);
+            this.PanelGameOver.Location = new System.Drawing.Point(-5, -1);
             this.PanelGameOver.Name = "PanelGameOver";
-            this.PanelGameOver.Size = new System.Drawing.Size(814, 456);
+            this.PanelGameOver.Size = new System.Drawing.Size(831, 456);
             this.PanelGameOver.TabIndex = 23;
             this.PanelGameOver.Visible = false;
             this.PanelGameOver.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelGameOver_Paint);
@@ -376,7 +382,7 @@
             this.playerTopButton.ForeColor = System.Drawing.Color.Yellow;
             this.playerTopButton.Image = ((System.Drawing.Image)(resources.GetObject("playerTopButton.Image")));
             this.playerTopButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.playerTopButton.Location = new System.Drawing.Point(565, 244);
+            this.playerTopButton.Location = new System.Drawing.Point(573, 244);
             this.playerTopButton.Name = "playerTopButton";
             this.playerTopButton.Size = new System.Drawing.Size(184, 67);
             this.playerTopButton.TabIndex = 24;
@@ -390,7 +396,7 @@
             this.UsernameText.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UsernameText.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameText.ForeColor = System.Drawing.Color.Blue;
-            this.UsernameText.Location = new System.Drawing.Point(459, 209);
+            this.UsernameText.Location = new System.Drawing.Point(467, 209);
             this.UsernameText.Name = "UsernameText";
             this.UsernameText.Size = new System.Drawing.Size(300, 33);
             this.UsernameText.TabIndex = 1;
@@ -403,7 +409,7 @@
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.Font = new System.Drawing.Font("Algerian", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.White;
-            this.UsernameLabel.Location = new System.Drawing.Point(450, 165);
+            this.UsernameLabel.Location = new System.Drawing.Point(458, 165);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(320, 41);
             this.UsernameLabel.TabIndex = 0;
@@ -422,6 +428,53 @@
             this.snakeControl1.Size = new System.Drawing.Size(10, 10);
             this.snakeControl1.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Algerian", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(381, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridView1.Size = new System.Drawing.Size(402, 267);
+            this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.Visible = false;
+            // 
+            // gridLabel
+            // 
+            this.gridLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridLabel.AutoSize = true;
+            this.gridLabel.BackColor = System.Drawing.Color.Transparent;
+            this.gridLabel.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridLabel.ForeColor = System.Drawing.Color.Gold;
+            this.gridLabel.Location = new System.Drawing.Point(0, 0);
+            this.gridLabel.Name = "gridLabel";
+            this.gridLabel.Size = new System.Drawing.Size(256, 26);
+            this.gridLabel.TabIndex = 25;
+            this.gridLabel.Text = "Your Score History:";
+            this.gridLabel.Visible = false;
+            // 
             // SnakeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,8 +482,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.mainMenuButton);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridLabel);
             this.Controls.Add(this.pictureBoxWhite);
             this.Controls.Add(this.pictureBoxGreen);
             this.Controls.Add(this.pictureBoxBlue);
@@ -441,7 +494,6 @@
             this.Controls.Add(this.wallBox);
             this.Controls.Add(this.startGameButton);
             this.Controls.Add(this.scoreLabel);
-            this.Controls.Add(this.PanelGameOver);
             this.Controls.Add(this.newGameButton);
             this.Controls.Add(this.optionsMenuButton);
             this.Controls.Add(this.topResultButton);
@@ -450,6 +502,9 @@
             this.Controls.Add(this.resolutionBox);
             this.Controls.Add(this.resolutionLabel);
             this.Controls.Add(this.speedLabel);
+            this.Controls.Add(this.mainMenuButton);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.PanelGameOver);
             this.Controls.Add(this.snakeControl1);
             this.DoubleBuffered = true;
             this.Name = "SnakeGame";
@@ -462,6 +517,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhite)).EndInit();
             this.PanelGameOver.ResumeLayout(false);
             this.PanelGameOver.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,6 +550,8 @@
         private System.Windows.Forms.TextBox UsernameText;
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Button playerTopButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label gridLabel;
     }
 }
 

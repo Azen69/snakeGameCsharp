@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="snakeDatabaseModelStoreContainer" CdmEntityContainer="snakeDatabaseEntities">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="snakeDatabaseModel.Players">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="date_creation" ColumnName="date creation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Results">
+      <EntityTypeMapping TypeName="snakeDatabaseModel.Results">
+        <MappingFragment StoreEntitySet="Results">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="playerId" ColumnName="playerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

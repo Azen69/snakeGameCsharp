@@ -8,3 +8,41 @@ D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\De
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\back.jpg
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\button.jpg
 D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csprojAssemblyReference.cache
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.dll.config
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.dll
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.SqlServer.dll
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.xml
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.SqlServer.xml
+D:\Pulpit\Uczelnia\Semestr 5\c#\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.CopyComplete
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\back.jpg
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\button.jpg
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.dll.config
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.dll
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.pdb
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.dll
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.SqlServer.dll
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.xml
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.SqlServer.xml
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.AssemblyReference.cache
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.SnakeControl.resources
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.GenerateResource.cache
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.CoreCompileInputs.cache
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.CopyComplete
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.dll
+E:\Dane\Uczelnia\Semestr 5\Semestr 5\Budowa aplikacji na platformie .NET\ryba\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.pdb
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\back.jpg
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\button.jpg
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.dll.config
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.dll
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\snakeControl.pdb
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.dll
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.SqlServer.dll
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.xml
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\bin\Debug\EntityFramework.SqlServer.xml
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.AssemblyReference.cache
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.SnakeControl.resources
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.GenerateResource.cache
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.CoreCompileInputs.cache
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.csproj.CopyComplete
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.dll
+E:\Desktop\Projekty\snakeGameCsharp\snakeControl\snakeControl\obj\Debug\snakeControl.pdb
